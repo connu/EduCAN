@@ -5,7 +5,8 @@ import React, { useState, useEffect } from 'react';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import logo from './logo.jpeg';
 
-const theme = createTheme({
+
+let theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
@@ -14,6 +15,17 @@ const theme = createTheme({
     text: {
       primary: '#ffffff', // Set the text color for dark mode
     },
+    typography: {
+      h3: {
+        fontSize: '1.2rem',
+        '@media (min-width:600px)': {
+          fontSize: '1.5rem',
+        },
+        '@media (min-width: 900px)': {
+          fontSize: '1.4rem',
+        },
+      }
+    }
  
   },
 });
@@ -22,13 +34,17 @@ const Volunteer = () => {
   return (
     <>  
       <Box sx={{ position: "absolute", top: 200, width: "100% ", height: "100%", bgcolor: "#068FFF"}}>
-          <Typography sx={{ textAlign: "center" }} variant='h2' color="white">lorem Ipsum</Typography>
-          <Typography sx={{ textAlign: "center" }} variant='h4' >"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</Typography>
+          <Typography sx={{ textAlign: "center" }} variant='h3' color="white">Many of us take education for granted. In fact, it is a privilege that many in this country do not have access to.
+
+Our organisation wants to change that. And with your help, we can help every child access quality education instead of being forced into poverty and child labour. 
+
+Any talent you have - whether it is music, art, communication, planning or volunteering - is crucial to solve this problem. 
+
+Fill out the volunteer form below to make a difference. After all, every vast ocean is comprised of single drops of water</Typography>
           {/* <Link sx={{ textAlign: "center", font}} href="#" underline="always">
             {'underline="always"'}
           </Link> */}
-          <Typography sx={{ textAlign: "center"}} variant='h1' ><Link href='googlefonts' underline='always'>Apply for being a organizer</Link></Typography>
-          <Typography sx={{ textAlign: "center"}} variant='h1' ><Link href='googlefonts' underline='always'>Apply for being a teacher</Link></Typography>
+          <Typography sx={{ textAlign: "center"}} variant='h1' ><Link href='https://forms.office.com/Pages/ResponsePage.aspx?id=8uuQ2fYhVEOyZjxaFh1d9c9S5QeRmKlFkF7TETZ1HmFUQjlGT01QM1dRWVpCUVBGNTVaOE5LM1U1MC4u' underline='always'>Apply for being a organizer/teacher</Link></Typography>
 
 
       </Box>
@@ -66,25 +82,13 @@ const ReachOut = () => {
           </Typography>
 
           <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            LOREM IPSUM   
+            We're excited to meet you! 
           </Typography>
           <Typography variant="body2">
-            Hubba dubba bubba 
-            Hubba dubba bubba 
-            Hubba dubba bubba 
-            Hubba dubba bubba 
-            Hubba dubba bubba 
-            Hubba dubba bubba 
-            Hubba dubba bubba 
-            Hubba dubba bubba 
-            Hubba dubba bubba 
+            <Link href="https://forms.microsoft.com/r/32BagYAuXf">Join us to be a part of the change</Link>
             <br />
-            Hubba dubba bubba 
-            Hubba dubba bubba 
-            Hubba dubba bubba 
-            Hubba dubba bubba 
-            Hubba dubba bubba 
-            Hubba dubba bubba 
+            You can volunteer in various different roles, ranging from being a teacher to an event organizer to marketing!
+            Spots are open and we could use your abilities! 
 
           </Typography>
         </CardContent>
@@ -101,8 +105,15 @@ const ReachOut = () => {
 const Aims = () => {
   return (
     <>
-      <Typography variant='h6' color="text.secondary"  component='div' sx={{ mt: 2, p: 1, fontSize: "46px", textAlign: "center"}}> Our aim is to set chain a series of projects that impact rural areas and various fields of education, along with the economy. We work to change social norms and practices such as the caste system against education, child labour, and every other reason that contributes to a loss of education.  </Typography>
+      <Typography variant='h6' color="text.secondary"  component='div' sx={{ mt: 2, p: 0, fontSize: "46px", textAlign: "center"}}> 160 million children under the age of 13 are engaged in child labour. 60 million have not received an education past primary levels. You might see these as statistics of yet more global and social issues; however, one is the solution to the other.
+
+Child labour is a vicious cycle. It yields nothing in terms of wages, so education is highly unaffordable. Uneducated individuals are unlikely to land suitably paying jobs, so they once again turn their children towards the unavoidable - child labour. <br />
+
+We at EduCan aim to spread not only education to these communities, but also awareness. <br /> Cultural and social taboos, such as the caste system and resistance against education for the girl child form one of the primary causes for illiteracy in India. 
+
+We know that alone, one can achieve anything, but together, we can achieve everything. That's why we aspire to partner with as many organisations, NGOs and individuals as possible to help those who may not have the opportunties to learn and grow mentally and physically. Join us and help to provide previously unknown opportunities to the talented youth of this planet </Typography>
     </>
+    
   )
 }
 const Graph = () => {
